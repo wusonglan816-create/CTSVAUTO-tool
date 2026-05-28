@@ -1,0 +1,59 @@
+device:
+  device_id: null
+  wait_timeout: 30
+  operation_timeout: 10
+  screenshot_dir: "./screenshots"
+  auto_reconnect: true
+  reconnect_attempts: 3
+
+test:
+  retry_count: 3
+  retry_delay: 5
+  parallel: false
+  parallel_workers: 1
+  stop_on_failure: false
+  skip_interactive: false
+  screenshot_on_fail: true
+  log_on_fail: true
+
+validation:
+  screenshot_threshold: 0.95
+  wait_after_action: 1.0
+  scroll_attempts: 3
+  pass_texts:
+    - "All Tests Passed"
+    - "PASS"
+    - "Passed"
+    - "Success"
+    - "测试通过"
+  fail_texts:
+    - "FAIL"
+    - "Failed"
+    - "Error"
+    - "测试失败"
+
+report:
+  output_dir: "./reports"
+  format: "html"
+  include_screenshots: true
+  include_logs: true
+  compress_output: false
+
+cts_verifier:
+  package: "com.android.cts.verifier"
+  activity: "com.android.cts.verifier.CtsVerifierActivity"
+  install_timeout: 60
+  launch_timeout: 10
+
+logging:
+  level: "INFO"
+  file: "logs/cts_automation.log"
+  max_size: 10
+  backup_count: 5
+  console_output: true
+  color_output: true
+
+advanced:
+  adb_path: null
+  temp_dir: "/tmp/cts_verify"
+  keep_temp_files: false

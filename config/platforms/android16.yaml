@@ -1,0 +1,32 @@
+platform: android16
+android_major: 16
+cts_verifier_title_prefix: "Verifier 16"
+tests:
+  ringer_mode:
+    name: "Ringer Mode Tests"
+    module: "AUDIO"
+    done_buttons:
+      - "I'M DONE"
+      - "I’M DONE"
+      - "DONE"
+    dnd_tile_labels:
+      - "Modes"
+      - "Do Not Disturb"
+    dnd_interruptions_row: "Alarms & other interruptions"
+    dnd_interruptions_enabled:
+      - "Alarms"
+      - "Media sounds"
+    dnd_interruptions_disabled:
+      - "Touch sounds"
+      - "Reminders"
+      - "Calendar events"
+    pass_markers:
+      - "All tests passed"
+      - "All Tests Passed"
+      - "Passed"
+      - "PASS"
+    shell:
+      disable_dnd: "cmd notification set_dnd off"
+      enable_dnd: "cmd notification set_dnd alarms"
+      set_ringer_normal: "cmd audio set-ringer-mode NORMAL"
+      enable_tap_sounds: "settings put system sound_effects_enabled 1"

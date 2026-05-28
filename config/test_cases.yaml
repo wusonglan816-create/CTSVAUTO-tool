@@ -1,0 +1,94 @@
+include_categories:
+  - audio
+  - camera
+  - alarms_timers
+  - device_admin
+  - device_controls
+  - display_cutout
+  - features
+  - input
+  - instant_apps
+  - networking
+  - notification
+  - other
+  - projection
+  - security
+  - sensor
+  - sharesheet
+  - streaming_video
+  - telephony
+  - tiles
+  - vibrator
+
+priority_tests:
+  high:
+    - "Audio Acoustic Echo Cancellation (AEC) Test"
+    - "Ringer Mode Tests"
+    - "Camera Flashlight"
+    - "Camera Formats"
+    - "Screen Lock Test"
+    - "Wi-Fi Test"
+    - "Notification Listener Test"
+    - "Has Vibrator Test"
+  medium:
+    - "Audio Frequency Line Test"
+    - "Audio Frequency Speaker Test"
+    - "Camera Intents"
+    - "Camera Orientation"
+    - "Device Admin Tapjacking Test"
+    - "Device Admin Uninstall Test"
+    - "Multinetwork connectivity Test"
+    - "Network Background Connectivity Test"
+    - "Bubble Notification Tests"
+    - "Sharesheet Payload Toggle Test"
+  low:
+    - "Audio Cold Start Input Latency Test"
+    - "Audio Cold Start Output Latency Test"
+    - "Camera Performance"
+    - "Projection Video Playback Test"
+    - "Streaming Video Quality Verifier"
+
+exclude_tests:
+  - "Analog Headset Audio Test"
+  - "Audio Data Paths Analog Jack Test"
+  - "Audio Data Paths USB Headset Test"
+  - "Audio Data Paths USB Interface Test"
+  - "USB Audio Peripheral Buttons Test"
+  - "USB Audio Peripheral Notifications Test"
+  - "USB Audio Restrict Record Access Test"
+  - "USB MIDI and Audio Test"
+  - "Camera ITS Test"
+  - "MTP Host Test"
+  - "NFC Test"
+  - "USB Accessory Test"
+  - "USB Device Test"
+  - "CtsCompanionDeviceManagerMultiDeviceTestCases"
+  - "CtsNfcHceMultiDeviceTestCases"
+  - "CtsMultiDeviceGenericRangingTests"
+  - "CtsUwbMultiDeviceFiraRangingTests"
+  - "CtsUwbMultiDeviceUwbManagerTests"
+  - "CtsWifiAwareTests"
+  - "CtsWifiSoftApTestCases"
+  - "BYOD Managed Provisioning"
+  - "Device Owner Tests"
+  - "Bluetooth Test"
+  - "Bluetooth LE Scanner Test"
+  - "Wi-Fi Direct Test"
+  - "Biometric Tests"
+  - "Fingerprint Bound Keys Test"
+  - "Identity Credential Authentication"
+  - "6DoF Test"
+  - "Accelerometer Measurement Test"
+  - "Gyroscope Measurement Test"
+  - "Magnetic Field Measurement Tests"
+  - "Default Dialer Test"
+  - "Telecom Incoming Call Test"
+  - "Dialer Receives Incoming Call"
+
+test_timeouts:
+  default: 60
+  "Audio Cold Start Input Latency Test": 120
+  "Audio Cold Start Output Latency Test": 120
+  "Camera ITS Test": 300
+  "Camera Performance": 180
+  "Streaming Video Quality Verifier": 300

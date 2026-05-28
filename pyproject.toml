@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cts-verifier-automation"
+version = "0.1.0"
+description = "Android CTS Verifier automation framework"
+requires-python = ">=3.10"
+dependencies = [
+    "uiautomator2>=2.16.0",
+    "PyYAML>=6.0",
+    "jinja2>=3.1.0",
+]
+
+[project.scripts]
+cts-verify = "src.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

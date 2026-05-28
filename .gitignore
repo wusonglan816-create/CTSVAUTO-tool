@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# CTS Verifier APK & reference manuals (large binaries)
+apk/*.apk
+*CTS Verifier*.pdf
+
+# Generated reports & logs
+reports/*.html
+reports/*.json
+reports/*.xml
+logs/
+screenshots/
+
+# Temp
+*.tmp
+*.swp
+.DS_Store
